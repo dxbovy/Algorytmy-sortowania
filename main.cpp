@@ -1,3 +1,4 @@
+#include "introsort.hpp"
 #include "mergesort.hpp"
 #include "quicksort.hpp"
 #include <iostream>
@@ -8,7 +9,7 @@ int main() {
                      55, 3,  98, 41, 10, 72, 28, 83, 60, 15,
                      37, 94, 6,  51, 82, 22, 68, 45, 11, 77};
 
-  Mergesort<int> ms;
+  Introsort<int> ms;
 
   ms.sort(tablica, 0, 29);
 
