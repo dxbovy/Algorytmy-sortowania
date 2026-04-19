@@ -7,7 +7,7 @@ public:
 
   void sort(T *tablica, int l, int r);
 
-private:
+protected:
   int divideTable(T *tablica, int l, int r);
   int selectPivot(int l, int r);
   void swap(T *tablica, int i1, int i2);
