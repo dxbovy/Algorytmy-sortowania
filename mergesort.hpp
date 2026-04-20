@@ -27,8 +27,8 @@ template <typename T>
 void Mergesort<T>::merge(T *tablica, int start, int middle, int end) {
   int sizeOfLeft = middle - start + 1;
   int sizeOfRight = end - middle;
-  T L[sizeOfLeft];
-  T R[sizeOfRight];
+  T* L = new T[sizeOfLeft];
+  T* R = new T[sizeOfRight];
   for (int i = 0; i < sizeOfLeft; i++)
     L[i] = tablica[start + i];
   for (int i = 0; i < sizeOfRight; i++)
@@ -60,4 +60,6 @@ void Mergesort<T>::merge(T *tablica, int start, int middle, int end) {
     j++;
     k++;
   }
+  delete[] L;
+  delete[] R;
 }

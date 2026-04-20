@@ -40,7 +40,7 @@ void fillArray(T *tablica, int size, double sortedPercentage = 0,
 
 int main() {
   srand(time(NULL));
-  int sizes[] = {10000, 50000, 100000, 50000, 1000000};
+  int sizes[] = {10000, 50000, 100000, 500000, 1000000};
   int samples = 100;
 
   ofstream file("output.csv");
@@ -63,9 +63,9 @@ int main() {
     int size = sizes[i];
     int *array = new int[size];
     int *array_cp = new int[size];
-
     for (int j = 0; j < sizeof(scenario) / sizeof(scenario[0]); j++) {
-      unsigned long long QsTime = 0, MsTime = 0, IsTime = 0;
+      cout << "Testowanie dla rozmiaru " << size << endl;
+      double QsTime = 0, MsTime = 0, IsTime = 0;
 
       for (int k = 0; k < samples; k++) {
         fillArray(array, size, scenario[j].sortedPercentage,
